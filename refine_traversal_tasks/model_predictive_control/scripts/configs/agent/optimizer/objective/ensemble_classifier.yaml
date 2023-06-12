@@ -1,0 +1,15 @@
+_target_: perceptual_metrics.mpc.objectives.EnsembleObjective
+objective:
+  _target_: perceptual_metrics.mpc.objectives.CombinedObjective
+  objectives:
+    rgb:
+      _target_: perceptual_metrics.mpc.objectives.SquaredError
+      key: rgb
+      weight: 0.5
+    classifier:
+      _target_: perceptual_metrics.mpc.objectives.ClassifierReward
+      key: rgb
+      weight: 10
+      checkpoint_directory: /viscam/projects/perceptual-metrics/perceptual-metrics/perceptual_metrics/reward_classifiers/${env.task}.pt
+agg: mean
+lamb: 0

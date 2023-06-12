@@ -1,0 +1,3 @@
+_target_: perceptual_metrics.mpc.objectives.PolicyFeatureDistance
+image_key: rgb
+weight: 1

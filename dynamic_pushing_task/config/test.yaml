@@ -1,0 +1,9 @@
+num_epoch: 200 # 500
+# change it if only use v or t
+modality: v_t
+# 202 for vt, 112 for v, 169 for v
+in_ch: 202
+train_path: train_data_path
+test_path: test_data_path
+model_dir: model/v_t
+model_path: model_path

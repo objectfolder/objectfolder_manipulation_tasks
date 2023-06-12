@@ -1,0 +1,2 @@
+_target_: perceptual_metrics.mpc.agent.DummyAgent
+a_dim: ${a_dim}

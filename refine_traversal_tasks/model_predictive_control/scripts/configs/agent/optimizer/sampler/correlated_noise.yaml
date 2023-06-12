@@ -1,0 +1,4 @@
+_target_: perceptual_metrics.mpc.sampler.CorrelatedNoiseSampler
+a_dim: ${env.a_dim}
+beta: 0.4
+horizon: ${planning_horizon}

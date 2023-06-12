@@ -1,0 +1,33 @@
+use_pb_gui: False
+max_step: 40
+
+obj_name: "51"
+obj_height: 0.2
+obj_x: 0.5
+initial_orn: [0.1, 1.5607963, 0.01]
+pos_y_limit: [-0.04, 0.04]
+pos_z_limit: [-0.03, 0.03]
+
+task: "DataTask"
+contact_location: 0.081
+num_episodes: 200
+dir_path: "data/surface/"
+seq_len: 20
+d_ori: 0.05
+mu: 0
+sigma: 0.005
+
+ori_x_limit: 0.3
+gelsight_config: "taxim_robot/config_r15_one_finger.yml"
+action_dim: 2
+croped_size: 64
+resize_size: 72
+
+# expand image shape if has two modalities
+modality: v_t
+image_shape: [64, 128]
+
+robot:
+  robotURDF_path: "data_collection/setup/robots/franka_panda/panda_one_finger.urdf"
+  basePosition: [0, 0, -0.1]
+  useFixedBase: True

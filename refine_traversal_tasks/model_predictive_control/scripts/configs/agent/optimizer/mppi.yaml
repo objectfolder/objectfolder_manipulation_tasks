@@ -1,0 +1,11 @@
+defaults:
+  - objective: mse_rgb
+  - sampler: correlated_noise
+
+_target_: perceptual_metrics.mpc.mppi.MPPIOptimizer
+a_dim: ${env.a_dim}
+num_samples: 200
+horizon: ${planning_horizon}
+gamma: 0.04
+init_std: [0.005, 0.005] #, 0.5, 0.5, 0]
+log_every: 1

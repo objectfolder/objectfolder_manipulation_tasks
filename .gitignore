@@ -1,0 +1,16 @@
+.DS_Store
+*logs
+*results
+
+__pycache__
+*.egg-info
+*outputs
+*launch_files
+*plots
+*tmp
+*wandb
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.pyc
+logs

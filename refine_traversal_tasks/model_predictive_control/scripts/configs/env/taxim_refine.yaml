@@ -1,0 +1,55 @@
+_target_: perceptual_metrics.envs.obj_taxim_env.ObjTaximEnv
+config:
+  use_pb_gui: False
+  max_step: 40
+  obj_name: "42"
+  obj_height: 0.2
+  contact_height: [-0.01, 0.01]
+  initial_orn: [1.6, 0, 1.6]
+
+  # obj_name: "11"
+  # obj_height: 0.2
+  # contact_height: [-0.01, 0.01]
+  # initial_orn: [1.6, 0, 1.6]
+
+  # obj_name: "35"
+  # initial_orn: [0, -0.09, 0]
+  # contact_height: [-0.01, 0.01]
+  # obj_height: 0.15
+
+  # obj_name: "39"
+  # obj_height: 0.2
+  # contact_height: [-0.01, 0.01]
+  # initial_orn: [1.6, 0, 1.6]
+
+  # obj_name: "53"
+  # obj_height: 0.2
+  # contact_height: [-0.02, 0.01]
+  # initial_orn: [1.6, 0, 1.6]
+
+  # obj_name: "34"
+  # initial_orn: [0, 0, 3.1415926]
+  # contact_height: [0.02, 0.06]
+
+  task: "DataTask"
+  contact_location: 0.081
+  num_episodes: 100
+  dir_path: "data/refine/"
+  seq_len: 20
+  d_ori: 0.05
+  mu: 0
+  sigma: 0.05
+  pos_x_limit: 0.003
+  ori_x_limit: 0.3
+  gelsight_config: "/viscam/projects/objectfolder_benchmark/Robot_related/Taxim_obj/taxim_robot/config_r15_one_finger.yml"
+  action_dim: 1
+  croped_size: 64
+  resize_size: 80
+  # expand image shape if has two modalities
+  modality: v_t
+  image_shape: [64, 128]
+  robot:
+    robotURDF_path: "/viscam/projects/objectfolder_benchmark/Robot_related/Taxim_obj/experiments/setup/robots/franka_panda/panda_one_finger.urdf"
+    basePosition: [0, 0, -0.1]
+    useFixedBase: True
+a_dim: 1

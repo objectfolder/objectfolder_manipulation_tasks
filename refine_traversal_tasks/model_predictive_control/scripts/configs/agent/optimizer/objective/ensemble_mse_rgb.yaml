@@ -1,0 +1,7 @@
+_target_: perceptual_metrics.mpc.objectives.EnsembleObjective
+objective:
+  _target_: perceptual_metrics.mpc.objectives.SquaredError
+  key: rgb
+  weight: 1
+agg: mean
+lamb: 0

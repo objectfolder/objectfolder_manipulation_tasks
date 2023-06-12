@@ -1,0 +1,45 @@
+use_pb_gui: False
+max_step: 200
+
+
+dir_path: "data/77"
+obj_name: "77"
+
+contact_height: 0.0
+
+# control the start height position of object
+# obj_height: 0.125
+
+# control the object start location along x axis
+obj_x: 0.55
+initial_orn: [0, 0, 0]
+task: "DataTask"
+contact_location: 0.
+
+# num of episode per combination and num of combinations
+num_episodes: 50
+num_combinations: 1
+
+seq_len: 20
+d_ori: 0.05
+mu: 0
+sigma: 0.005
+pos_y_limit: [-0.055, 0.055]
+pos_z_limit: [-0.035, -0.015]
+ori_x_limit: 0.3
+gelsight_config: "taxim_robot/config_r15_one_finger.yml"
+action_dim: 2
+croped_size: 64
+resize_size: 80
+initial_dist: 0.2
+fix_obj: False
+
+# below are for mpc
+# expand image shape if has two modalities
+modality: v
+image_shape: [64, 64]
+
+robot:
+  robotURDF_path: "data_collection/setup/robots/franka_panda/panda_one_finger.urdf"
+  basePosition: [0, 0, -0.1]
+  useFixedBase: True

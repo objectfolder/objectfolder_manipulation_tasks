@@ -1,0 +1,4 @@
+_target_: perceptual_metrics.mpc.objectives.ClassifierReward
+key: rgb
+weight: 1
+checkpoint_directory: /viscam/projects/perceptual-metrics/perceptual-metrics/perceptual_metrics/reward_classifiers/${env.task}.pt

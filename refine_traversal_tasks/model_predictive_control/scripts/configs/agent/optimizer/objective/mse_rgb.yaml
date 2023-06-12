@@ -1,0 +1,3 @@
+_target_: perceptual_metrics.mpc.objectives.SquaredError
+key: rgb
+weight: 1

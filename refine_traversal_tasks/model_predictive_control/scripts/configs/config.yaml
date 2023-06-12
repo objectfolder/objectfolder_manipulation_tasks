@@ -1,0 +1,39 @@
+defaults:
+  - model: svg_prime
+  - agent: planning_agent
+  - env: taxim_surface
+  - sweep: single_task
+#  - hydra/launcher: submitit_slurm
+
+seed: 0
+num_processes: 16
+num_trajectories: 250
+max_traj_length: 15
+n_context: 2
+planning_horizon: 10
+camera_height: 64
+camera_width: 64
+run_name: default
+resume: True
+
+task: surface
+# change image shape if have two modalities
+image_shape: [64, 128]
+modality: v_t
+
+planning_modalities:
+  - rgb
+
+camera_names:
+  - agentview_shift_2
+model_name: default
+
+hydra:
+  run:
+    dir: ./outputs/${task}/${env.config.obj_name}/${modality} #now:%Y-%m-%d}/${now:%H-%M-%S}/${}
+  job:
+    config:
+      override_dirname:
+        exclude_keys:
+          - seed
+

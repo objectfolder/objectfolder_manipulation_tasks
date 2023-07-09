@@ -1,6 +1,6 @@
-# Robotic Tasks Benchmarks 
+# Object Manipulation Tasks in ObjectFolder Benchmark
 
-This repository is the implementation for all four robotic tasks in *The ObjectFolder Benchmark: Multisensory Learning with Neural and Real Objects*, including dynamic pushing, grasp stability prediction, contact refinement, and surface traversal.
+This repository contains the implementation for the four object manipulation tasks in *The ObjectFolder Benchmark: Multisensory Learning with Neural and Real Objects*, including dynamic pushing, grasp stability prediction, contact refinement, and surface traversal.
 
 ![demo_screwdriver](/media/object_manipulation.png)
 
@@ -95,6 +95,6 @@ cd dynamic_pushing_task/scripts
 
 ## Operating System
 
-We recommend to conduct experiments on **Ubuntu**. The code and environment is tested in a Ubuntu 22.04 PC with a NVIDIA GTX 1080Ti Graphics Card.
+We recommend running experiments on **Ubuntu**. The code and environment are tested using a Ubuntu 22.04 PC with a NVIDIA GTX 1080Ti Graphics Card.
 
 
